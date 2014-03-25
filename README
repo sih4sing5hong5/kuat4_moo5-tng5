@@ -1,0 +1,13 @@
+安裝
+pip install django
+pip install xlrd
+
+python manage.py syncdb
+
+匯入中選會資料
+python manage.py shell
+	from 中選會檔案匯入資料庫 import 中選會檔案匯入資料庫
+	中選會檔案匯入資料庫()
+
+架網頁
+python manage.py runserver	
