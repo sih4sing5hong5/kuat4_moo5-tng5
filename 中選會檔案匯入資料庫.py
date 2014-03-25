@@ -45,7 +45,7 @@ class 中選會檔案匯入資料庫:
 							欄位 = []
 							for 資料 in 逝[2:-1]:
 								欄位.append(int(資料))
-							欄位.append(資料)
+							欄位.append(逝[-1])
 							print(鄉鎮區, 村里,)
 							print(候選人名, 欄位)
 							這馬投開票所 = 投開票所.objects.create(
