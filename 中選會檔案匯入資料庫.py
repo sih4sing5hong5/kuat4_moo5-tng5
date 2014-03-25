@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 import os
 import xlrd
 from 選區資料.模型 import 選區
@@ -18,14 +20,14 @@ class 中選會檔案匯入資料庫:
 				表格檔 = xlrd.open_workbook('{0}/{1}'.format(檔案所在, 檔名))
 				for 表格名 in 表格檔.sheet_names():
 					表格 = 表格檔.sheet_by_name(表格名)
-					print(縣市, 表格名)
+# 					print(縣市, 表格名)
 					這馬選區 = 選區.objects.create(縣市 = 縣市, 第幾區 = 表格名)
 # 					print(表格.row_values(0))
 # 					print(表格.row_values(1))
 					if 表格.row_values(1)[:3] != self.表格分類[:3]:
 # 						表格.row_values(1)[-8:]!=self.表格分類[-8:]:
 # 有發票率、投票率的無仝
-						print(self.表格分類)
+# 						print(self.表格分類)
 						raise RuntimeError('標頭毋著')
 					候選人名 = []
 					for 欄 in 表格.row_values(2):
@@ -46,8 +48,8 @@ class 中選會檔案匯入資料庫:
 							for 資料 in 逝[2:-1]:
 								欄位.append(int(資料))
 							欄位.append(資料)
-							print(鄉鎮區, 村里,)
-							print(候選人名, 欄位)
+# 							print(鄉鎮區, 村里,)
+# 							print(候選人名, 欄位)
 							這馬投開票所 = 投開票所.objects.create(
 								選區 = 這馬選區,
 								鄉鎮區別 = 鄉鎮區,
@@ -62,7 +64,7 @@ class 中選會檔案匯入資料庫:
 								選舉人數G = 欄位[-2],
 								發票率H = 欄位[-1],)
 							if len(候選人名) != len(欄位[1:-8]):
-								print(候選人名, 欄位[1:-8])
+# 								print(候選人名, 欄位[1:-8])
 								raise RuntimeError('欄位毋著')
 							for 人, 票 in zip(候選人名, 欄位[1:-8]):
 								候選人.objects.create(
