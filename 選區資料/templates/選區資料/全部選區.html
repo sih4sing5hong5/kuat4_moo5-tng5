@@ -1,0 +1,9 @@
+<table>
+	{% for 資料 in 全部選區 %}
+		<tr>
+		<td>{{ 資料.縣市 }}</td>
+		<td>{{ 資料.第幾區 }}</td>
+		<td>{{ 資料.投開票所.count }}</td>
+		</tr>
+	{% endfor %}
+</table>

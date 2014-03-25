@@ -1,1 +1,2 @@
-import 臺灣言語資料庫.模型
+from 選區資料 import 模型
+模型
