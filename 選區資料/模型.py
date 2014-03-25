@@ -12,8 +12,9 @@ class 選區(models.Model):
 class 投開票所(models.Model):
 	選區 = models.ForeignKey(選區, related_name='投開票所',
 		primary_key=True)
-	鄉鎮區 = models.CharField(max_length=20, primary_key=True)
-	村里 = models.CharField(max_length=20, primary_key=True)
+	鄉鎮區別 = models.CharField(max_length=20, primary_key=True)
+	村里別 = models.CharField(max_length=20, primary_key=True)
+	投票所別=models.IntegerField()
 	有效票數A=models.IntegerField()#A=1+2+...+N"	
 	無效票數B=models.IntegerField()#	"
 	投票數C=models.IntegerField()#C=A+B"	"
