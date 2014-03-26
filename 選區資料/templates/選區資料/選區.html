@@ -2,10 +2,10 @@
 
 {% block 內容 %}
 	<div>{{ 選區.縣市 }} | {{ 選區.第幾區 }}</div>
-	<table style="border: 5px double rgb(109, 2, 107); height: 100px; background-color: rgb(255, 255, 255);" align="left" cellpadding="5" cellspacing="5" frame="border" rules="all">
+	<table class=t1>
 	{% load 選區資料.樣版工具 %}
 	{% for 逝 in 選區.綜合資訊|轉置 %}
-		<tr>
+		<tr class = top>
 		{% for 欄 in 逝 %}
 			<td>
 				{{ 欄|變字串 }}<br/>
@@ -14,8 +14,11 @@
 		</tr>
 	{% endfor %}
 	</table>
-	<table style="border: 5px double rgb(109, 2, 107); height: 100px; background-color: rgb(255, 255, 255);" align="left" cellpadding="5" cellspacing="5" frame="border" rules="all">
-		<tr>
+	<br>
+	<br>
+	
+	<table class=t1>
+		<tr class=top>
 			{% for 人,票 in 選區.候選人票數 %}
 				<th>
 					{{ 人|linebreaksbr }}
@@ -30,8 +33,12 @@
 			{% endfor %}
 		</tr>
 	</table>
-	<table style="border: 5px double rgb(109, 2, 107); height: 100px; background-color: rgb(255, 255, 255);" align="left" cellpadding="5" cellspacing="5" frame="border" rules="all">
-		<tr>
+	
+	<br>
+	<br>
+	
+	<table class=t1>
+		<tr class=top>
 		<td>鄉鎮區別</td>
 		<td>村里別</td>
 		<td>投票所別</td>
