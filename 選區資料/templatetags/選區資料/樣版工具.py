@@ -29,6 +29,6 @@ def 轉置( 矩陣 ):
 @register.filter
 def 變字串(物件):
 	if isinstance(物件, float):
-		return round(物件,1)
+		return str(round(物件,1))+'%'
 	return 物件
 		
