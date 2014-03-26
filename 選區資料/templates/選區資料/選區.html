@@ -1,6 +1,18 @@
 {% extends "選區資料/框.html" %}
 
 {% block 內容 %}
+	<div>{{ 選區.縣市 }} | {{ 選區.第幾區 }}</div>
+	<table style="border: 5px double rgb(109, 2, 107); height: 100px; background-color: rgb(255, 255, 255);" align="left" cellpadding="5" cellspacing="5" frame="border" rules="all">
+		<tr>
+		{% for 題,票,比 in 選區.綜合資訊 %}
+			<td>
+				{{ 題 }}<br/>
+				{{ 票 }}<br/>
+				{{ 比|floatformat:-1 }}%
+			</td>
+		{% endfor %}
+		</tr>
+	</table>
 	<table style="border: 5px double rgb(109, 2, 107); height: 100px; background-color: rgb(255, 255, 255);" align="left" cellpadding="5" cellspacing="5" frame="border" rules="all">
 		<tr>
 			{% for 人,票 in 選區.候選人票數 %}
