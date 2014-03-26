@@ -10,7 +10,15 @@
 	margin-left:50px;
 	height: 130px;
 	font-size: 100%;
-	
+}
+
+#headerBar
+{
+	margin:0px auto;
+	height:20px;
+	font-size: 100%;
+	background-color: rgb(50,50,50);
+	color:white;
 }
 
 #outer {
