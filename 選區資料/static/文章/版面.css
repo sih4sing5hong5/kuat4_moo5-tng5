@@ -1,6 +1,6 @@
 #main
 {
-	
+	margin:0px auto;
 	
 }
 
@@ -32,7 +32,8 @@
 }
 
 #footer {
+	margin:0px auto;
 	height: 130px;
 	clear:left;
-	background-color: red;
+	background-color: #DDDDDD;
 }
