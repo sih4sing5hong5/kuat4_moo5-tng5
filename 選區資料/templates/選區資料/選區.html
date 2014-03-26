@@ -3,6 +3,22 @@
 {% block 內容 %}
 	<table style="border: 5px double rgb(109, 2, 107); height: 100px; background-color: rgb(255, 255, 255);" align="left" cellpadding="5" cellspacing="5" frame="border" rules="all">
 		<tr>
+			{% for 人,票 in 選區.候選人票數 %}
+				<th>
+					{{ 人|linebreaksbr }}
+				</th>
+			{% endfor %}
+		</tr>
+		<tr>
+			{% for 人,票 in 選區.候選人票數 %}
+				<td>
+					{{票}}
+				</td>
+			{% endfor %}
+		</tr>
+	</table>
+	<table style="border: 5px double rgb(109, 2, 107); height: 100px; background-color: rgb(255, 255, 255);" align="left" cellpadding="5" cellspacing="5" frame="border" rules="all">
+		<tr>
 		<td>鄉鎮區別</td>
 		<td>村里別</td>
 		<td>投票所別</td>
