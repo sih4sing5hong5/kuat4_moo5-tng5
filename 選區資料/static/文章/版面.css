@@ -1,4 +1,35 @@
-body
+#main
 {
-	font-size: 150%;
+	
+	
+}
+
+#header
+{
+	height: 130px;
+	font-size: 100%;
+	background-color: grey;
+}
+
+#outer {
+	 margin:0px auto;
+}
+
+#sidebar {
+	width:15%;
+    float:left;
+    margin:0px auto;
+}
+
+#container
+{
+	width:85%;
+	float:left;
+	margin:0px auto;
+}
+
+#footer {
+	height: 130px;
+	clear:left;
+	background-color: red;
 }

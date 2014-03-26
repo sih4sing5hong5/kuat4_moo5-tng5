@@ -8,28 +8,34 @@
 	<link rel="stylesheet" type="text/css" href="{% static '文章/format.css' %}" />
 </head>
 
-<body>
-    <!-- SIDEBAR -->
-    <div id="sidebar"> {% block sidebar %}{% endblock %} </div>
-
-    <div id="container">
-
-        <!-- MENU -->
-
-        <div id="menu">
-            {% block nav-global %}
-				<span>
-					<a href="{% url '看全部選區' %}">全部選區</a>
-				</span>
-            {% endblock %}
-        </div>
-	<br/>
-        <!-- CONTENT -->
-
-        <div id="內容">
-            {% block 內容 %}{% endblock %}
-        </div>
+<body id = "main">
+	<div id="header"> </div>
+	
+	<div id = "outer">
+	    <!-- SIDEBAR -->
+	    <div id="sidebar"> {% block sidebar %}{% endblock %} 
+	    	<li>"tt"</li>
+	    </div>
+	
+	    <div id="container">
+	
+	        <!-- MENU -->
+	
+	        <div id="menu">
+	            {% block nav-global %}
+					<span>
+						<a href="{% url '看全部選區' %}">全部選區</a>
+					</span>
+	            {% endblock %}
+	        </div>
+		<br/>
+	        <!-- CONTENT -->
+	
+	        <div id="內容">
+	            {% block 內容 %}{% endblock %}
+	        </div>
+	    </div>
     </div>
-
+	<div id="footer"> </div>
 </body>
 </html>
