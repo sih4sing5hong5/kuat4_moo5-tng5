@@ -1,7 +1,8 @@
 {% extends "選區資料/框.html" %}
 
 {% block 內容 %}
-	<div>{{ 選區.縣市 }} | {{ 選區.第幾區 }}</div>
+	<div>{{ 選區.縣市 }} | {{ 選區.第幾區 }}</div><br>
+	<h1 class = tableHead>得票率第一、二名比較</h1>
 	<table class=t1>
 	{% load 選區資料.樣版工具 %}
 	<tr class = top>
@@ -16,9 +17,7 @@
 	{% endfor %}
 	</tr>
 	</table>
-	<br>
-	<br>
-	
+	<h1 class = tableHead>參選候選人得票結果</h1>
 	<table class=t1>
 		<tr class=top>
 			{% for 人,票 in 選區.候選人票數 %}
@@ -35,10 +34,7 @@
 			{% endfor %}
 		</tr>
 	</table>
-	
-	<br>
-	<br>
-	
+	<h1 class = tableHead>各投開票所選票明細</h1>	
 	<table class=t1>
 		<tr class=top>
 		<td>鄉鎮區別</td>
@@ -51,7 +47,7 @@
 		<td>發出票數</td>
 		<td>用餘票數</td>
 		<td>選舉人數</td>
-		<td>發票率</td>
+		<td>發票率%</td>
 		</tr>	
 		{% for 投開票所 in 選區.投開票所.all %}
 			<tr>

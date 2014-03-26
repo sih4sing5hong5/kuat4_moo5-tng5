@@ -1,3 +1,9 @@
+h1.tableHead
+{
+	text-align:center;
+	font-family: 標楷體;
+}
+
 table.t1
 {
 	width: 100%;
