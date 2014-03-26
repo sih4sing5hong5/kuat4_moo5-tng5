@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block 標題 %}華語臺語雙語語料庫系統{% endblock %}</title>
+    {% block extrahead %}{% endblock %}
+    {% load staticfiles %}
+	<link rel="stylesheet" type="text/css" href="{% static '文章/版面.css' %}" />
+</head>
+
+<body>
+    <!-- SIDEBAR -->
+    <div id="sidebar"> {% block sidebar %}{% endblock %} </div>
+
+    <div id="container">
+
+        <!-- MENU -->
+
+        <div id="menu">
+            {% block nav-global %}
+				<span>
+					<a href="{% url '看全部選區' %}">全部選區</a>
+				</span>
+            {% endblock %}
+        </div>
+	<br/>
+        <!-- CONTENT -->
+
+        <div id="內容">
+            {% block 內容 %}{% endblock %}
+        </div>
+    </div>
+
+</body>
+</html>

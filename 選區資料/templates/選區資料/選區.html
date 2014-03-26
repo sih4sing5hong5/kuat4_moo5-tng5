@@ -1,32 +1,36 @@
-<table style="border: 5px double rgb(109, 2, 107); height: 100px; background-color: rgb(255, 255, 255);" align="left" cellpadding="5" cellspacing="5" frame="border" rules="all">
-	<tr>
-	<td>鄉鎮區別</td>
-	<td>村里別</td>
-	<td>投票所別</td>
-	<td>有效票數</td>
-	<td>無效票數</td>
-	<td>投票數</td>
-	<td>已領未投票數</td>
-	<td>發出票數</td>
-	<td>用餘票數</td>
-	<td>選舉人數</td>
-	<td>發票率</td>
-	</tr>	
-	{% for 投開票所 in 選區.投開票所.all %}
+{% extends "選區資料/框.html" %}
+
+{% block 內容 %}
+	<table style="border: 5px double rgb(109, 2, 107); height: 100px; background-color: rgb(255, 255, 255);" align="left" cellpadding="5" cellspacing="5" frame="border" rules="all">
 		<tr>
-		<td>{{ 投開票所.鄉鎮區別 }}</td>
-		<td>{{ 投開票所.村里別 }}</td>
-		<td>{{ 投開票所.投票所別 }}</td>
-		<td>{{ 投開票所.有效票數A }}</td>
-		<td>{{ 投開票所.無效票數B }}</td>
-		<td>{{ 投開票所.投票數C }}</td>
-		<td>{{ 投開票所.已領未投票數D }}</td>
-		<td>{{ 投開票所.發出票數E }}</td>
-		<td>{{ 投開票所.用餘票數F }}</td>
-		<td>{{ 投開票所.選舉人數G }}</td>
-		<td>{{ 投開票所.發票率H }}</td>
-		<!-- <td>{{ 投開票所.收錄時間 }}</td>
-		<td>{{ 投開票所.修改時間 }}</td> -->	
-		</tr>
-	{% endfor %}
-</table>
+		<td>鄉鎮區別</td>
+		<td>村里別</td>
+		<td>投票所別</td>
+		<td>有效票數</td>
+		<td>無效票數</td>
+		<td>投票數</td>
+		<td>已領未投票數</td>
+		<td>發出票數</td>
+		<td>用餘票數</td>
+		<td>選舉人數</td>
+		<td>發票率</td>
+		</tr>	
+		{% for 投開票所 in 選區.投開票所.all %}
+			<tr>
+			<td>{{ 投開票所.鄉鎮區別 }}</td>
+			<td>{{ 投開票所.村里別 }}</td>
+			<td>{{ 投開票所.投票所別 }}</td>
+			<td>{{ 投開票所.有效票數A }}</td>
+			<td>{{ 投開票所.無效票數B }}</td>
+			<td>{{ 投開票所.投票數C }}</td>
+			<td>{{ 投開票所.已領未投票數D }}</td>
+			<td>{{ 投開票所.發出票數E }}</td>
+			<td>{{ 投開票所.用餘票數F }}</td>
+			<td>{{ 投開票所.選舉人數G }}</td>
+			<td>{{ 投開票所.發票率H }}</td>
+			<!-- <td>{{ 投開票所.收錄時間 }}</td>
+			<td>{{ 投開票所.修改時間 }}</td> -->	
+			</tr>
+		{% endfor %}
+	</table>
+{% endblock %}
