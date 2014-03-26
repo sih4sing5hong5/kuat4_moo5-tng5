@@ -1,0 +1,15 @@
+body {
+	font-size: 150%;
+}
+
+table {
+	border: 5px solid rgb(109, 2, 107);
+	border-width: 2px;
+	/*	border-spacing: 5px;*/
+}
+
+th,td {
+	border: 5px double rgb(109, 2, 107);
+	border-width: 2px;
+	padding: 5px;
+}
