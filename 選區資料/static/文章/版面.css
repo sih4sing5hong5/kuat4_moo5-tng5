@@ -6,13 +6,16 @@
 
 #header
 {
+	margin:0px auto;
+	margin-left:50px;
 	height: 130px;
 	font-size: 100%;
-	background-color: grey;
+	
 }
 
 #outer {
 	 margin:0px auto;
+	 font-size: 80%;
 }
 
 #sidebar {
