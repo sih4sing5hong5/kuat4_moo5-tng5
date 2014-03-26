@@ -4,15 +4,17 @@
 	<div>{{ 選區.縣市 }} | {{ 選區.第幾區 }}</div>
 	<table class=t1>
 	{% load 選區資料.樣版工具 %}
+	<tr class = top>
 	{% for 逝 in 選區.綜合資訊|轉置 %}
-		<tr class = top>
 		{% for 欄 in 逝 %}
 			<td>
 				{{ 欄|變字串 }}<br/>
 			</td>
 		{% endfor %}
 		</tr>
+		<tr>
 	{% endfor %}
+	</tr>
 	</table>
 	<br>
 	<br>
