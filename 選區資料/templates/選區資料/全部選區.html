@@ -8,7 +8,12 @@
 		<tr>
 		<td>{{ 資料.縣市 }}</td>
 		<td><a href="{% url '看選區' 資料.pk %}">{{ 資料.第幾區 }}</a></td>
-		<td><a href="{% url '看選區' 資料.pk %}">{{ 資料.投開票所.count }}</a></td>
+		{% for 人,票 in 資料.候選人票數 %}
+			<td>
+				{{ 人 }}<br/>
+				{{票}}
+			</td>
+		{% endfor %}
 		</tr>
 	{% endfor %}
 </table>
