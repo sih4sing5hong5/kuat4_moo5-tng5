@@ -1,9 +1,3 @@
-h1.tableHead
-{
-	text-align:center;
-	font-family: 標楷體;
-}
-
 table.t1
 {
 	width: 100%;
@@ -11,7 +5,7 @@ table.t1
 	border-collapse:collapse;
 }
 
-table.t1 td,th
+table.t1 td
 {
 	vertical-align: top;
 	border: 1px solid rgb(50,50,50);
@@ -19,11 +13,20 @@ table.t1 td,th
 	font-family: myFirstFont;
 }
 
-tr.top td,th 
-{
+tr.top td,th {
 	text-align:center;
-	background-color:rgb(100,100,100);
+	border: 1px solid rgb(50,50,50);
+	background-color:#000099;
 	color:white;
 	font-family: 標楷體;
 	font-weight : bold;	
+}
+
+h1.tableHead
+{
+	font-family: 標楷體;
+	font-weight: bold;
+	font-family: impact;
+	text-shadow: 1px 1px 2px #777;
+	text-align:center;	
 }

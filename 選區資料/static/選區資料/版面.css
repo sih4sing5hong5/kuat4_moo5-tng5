@@ -1,21 +1,25 @@
 #main
 {
 	margin:0px auto;
-	
 }
 
 #header
 {
 	margin:0px auto;
-	margin-left:20px;
-	height: 130px;
+	height: 140px;
 	font-size: 100%;
+	background:#F0F0F0;
+}
+
+#mainIcon
+{
+	position:relative;
+	left:20px;
 }
 
 #headerBar
 {
 	margin:0px auto;
-	margin-top:10px;
 	height:40px;
 	font-size: 120%;
 	font-weight: bold;
@@ -55,14 +59,13 @@ table.topnav td
 
 #outer {
 	 margin:0px auto;
-	 margin-top:10px;
 	 font-size: 80%;
 }
 
 #sidebar {
 	width:15%;
+	height:100%;
     float:left;
-    margin:0px auto;
 }
 
 #container
