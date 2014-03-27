@@ -121,6 +121,12 @@ table.sidebar a
 	background:white;
 }
 
+#內容
+{
+	margin-left:5px;
+	margin-right:5px;
+}
+
 #footer {
 	margin:0px auto;
 	height: 130px;
