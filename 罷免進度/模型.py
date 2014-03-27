@@ -5,7 +5,7 @@ from 選區資料.模型 import 選區
 from datetime import datetime
 
 class 罷免(models.Model):
-	選區 = models.ForeignKey(選區, related_name='罷免')
+	選區 = models.OneToOneField(選區, related_name='罷免')
 	開始罷免時間 = models.DateField(default=datetime.now)
 	結束罷免時間 = models.DateField(default=datetime.now)
 	有效罷免文件 = models.IntegerField(default=0)
