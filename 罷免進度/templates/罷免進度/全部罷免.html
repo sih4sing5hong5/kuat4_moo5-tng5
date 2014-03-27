@@ -1,0 +1,27 @@
+{% extends "選區資料/框.html" %}
+
+{% block 內容 %}
+	<h1 class = tableHead>各選區選舉結果與得票率第一、二名比較</h1>
+	<table class = t1>
+		<tr class = top>
+		<th>選區</th>
+		<th>開始時間</th>
+		<th>結束時間</th>
+		<th>有效文件</th>
+		<th>無效文件</th>
+		<th>收錄時間</th>
+		<th>修改時間</th>
+		</tr>
+		{% for 罷免 in 全部罷免 %}
+			<tr>
+			<td>{{ 資料.選區 }}</td>
+			<td>{{ 資料.開始罷免時間 }}</td>
+			<td>{{ 資料.結束罷免時間 }}</td>
+			<td>{{ 資料.有效罷免文件 }}</td>
+			<td>{{ 資料.無效罷免文件 }}</td>
+			<td>{{ 資料.收錄時間 }}</td>
+			<td>{{ 資料.修改時間 }}</td>
+			</tr>
+		{% endfor %}
+	</table>
+{% endblock %}

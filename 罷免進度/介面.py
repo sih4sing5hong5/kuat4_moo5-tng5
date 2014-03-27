@@ -10,19 +10,20 @@ from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
 from django.db.models import Q
 from 選區資料.模型 import 選區
+from 罷免進度.模型 import 罷免
 
-def 全部罷免進度(request):
-	全部選區 = 選區.objects.all()
-	版 = loader.get_template('選區資料/全部選區.html')
+def 看全部罷免(request):
+	全部罷免 = 罷免.objects.all()
+	版 = loader.get_template('罷免進度/全部罷免.html')
 	文 = RequestContext(request, {
-		'全部選區': 全部選區,
+		'全部罷免': 全部罷免,
 	})
 	return HttpResponse(版.render(文))
 
-def 罷免進度(request,pk):
+def 罷免資訊(request, pk):
 	罷免資訊
 	選區資料 = 選區.objects.get(pk=pk)
-	版 = loader.get_template('選區資料/選區.html')
+	版 = loader.get_template('罷免進度/選區.html')
 	文 = RequestContext(request, {
 		'選區': 選區資料,
 	})

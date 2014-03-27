@@ -49,6 +49,8 @@ class 選區(models.Model):
 		return self.投開票所.aggregate(Sum('投票數C'))['投票數C__sum']
 	def 選區總票數(self):
 		return self.投開票所.aggregate(Sum('選舉人數G'))['選舉人數G__sum']
+	def __str__(self):
+		return self.縣市+' '+self.第幾區
 
 class 投開票所(models.Model):
 	選區 = models.ForeignKey(選區, related_name = '投開票所')

@@ -1,2 +1,2 @@
-from 選區資料 import 模型
+from 罷免進度 import 模型
 模型

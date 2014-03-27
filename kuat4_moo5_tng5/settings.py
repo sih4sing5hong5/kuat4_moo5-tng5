@@ -37,6 +37,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     '選區資料',
+    '罷免進度',
 )
 
 MIDDLEWARE_CLASSES = (
