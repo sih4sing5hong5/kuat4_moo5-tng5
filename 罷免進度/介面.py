@@ -12,6 +12,7 @@ from django.db.models import Q
 from 選區資料.模型 import 選區
 from 罷免進度.模型 import 罷免
 from 罷免進度.表格 import 罷免表格
+from dateutil.relativedelta import relativedelta
 
 def 看全部罷免(request):
 	全部罷免 = 罷免.objects.all()
@@ -35,6 +36,7 @@ def 改罷免(request, pk=None):
 		罷免資料=get_object_or_404(罷免, pk=pk)
 	else:
 		罷免資料=罷免()
+		罷免資料.結束罷免時間=罷免資料.結束罷免時間+relativedelta(months=+2)
 	if request.method == 'POST':  # If the form has been submitted...
 		表格 = 罷免表格(request.POST, instance=罷免資料)
 		if 表格.is_valid():  # All validation rules pass

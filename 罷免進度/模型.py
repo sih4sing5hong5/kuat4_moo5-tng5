@@ -2,11 +2,12 @@ from django.db import models
 from django.db.models.query import QuerySet
 from django.db.models.aggregates import Sum
 from 選區資料.模型 import 選區
+from datetime import datetime
 
 class 罷免(models.Model):
 	選區 = models.ForeignKey(選區, related_name='罷免')
-	開始罷免時間 = models.DateField()
-	結束罷免時間 = models.DateField()
+	開始罷免時間 = models.DateField(default=datetime.now)
+	結束罷免時間 = models.DateField(default=datetime.now)
 	有效罷免文件 = models.IntegerField(default=0)
 	無效罷免文件 = models.IntegerField(default=0)
 	收錄時間 = models.DateTimeField(auto_now_add=True)
