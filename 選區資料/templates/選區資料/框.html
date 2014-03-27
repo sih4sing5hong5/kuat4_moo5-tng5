@@ -13,7 +13,12 @@
 		<img src = "{% static 'image/header.jpg' %}" align=left>
 	</div>
 	<div id="headerBar"> 
-		<li>123</li>
+		<table class = topnav>
+			<tr>
+				<td><a class = topnav href="{% url '看全部選區' %}">各選區資料</a></td>
+				<td><a class = topnav href="{% url '看全部罷免' %}">罷免狀況</a></td>
+			</tr>
+		</table>
 	</div>	
 	
 	<div id = "outer">
