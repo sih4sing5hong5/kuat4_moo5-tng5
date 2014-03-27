@@ -1,0 +1,13 @@
+{% extends "選區資料/框.html" %}
+
+{% block 內容 %}
+	<form action="" method="post">{% csrf_token %}
+	<table class="">
+	 {{ 表格.as_p }}
+	
+	<tr><td>
+		<input type="submit" value="確定" />
+		</td></tr>
+		</table>
+	</form>
+{% endblock %}
