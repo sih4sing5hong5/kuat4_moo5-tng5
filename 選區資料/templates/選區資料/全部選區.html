@@ -1,5 +1,7 @@
 {% extends "選區資料/sidebar.html" %}
 
+{% load staticfiles %}
+{% load 選區資料.樣版工具 %}
 {% block 內容 %}
 	<h1 class = tableHead>各選區選舉結果與得票率第一、二名比較</h1>
 	<table class = t1>
@@ -20,10 +22,17 @@
 			<td><a href="{% url '看選區' 資料.pk %}">{{ 資料.第幾區 }}</a></td>
 			{% for 題,票,比 in 資料.綜合資訊 %}
 				<td>
-					{{ 題 }}<br/>
-					{% if '國民黨' in 題 %}
-					addd
-					{% endif %} 
+					{% if forloop.counter == 1 or forloop.counter == 2 %}
+						{{ 題}}
+						{% if '國民黨' in 題 %}<img src = "{% static 'image/國民黨黨徽.jpg' %}">
+						{% elif '民主進步黨' in 題 %}<img src = "{% static 'image/民進黨黨徽.jpg' %}">
+						{% elif '親民黨' in 題 %}<img src = "{% static 'image/親民黨黨徽.jpg' %}">
+						{% elif '台灣團結聯盟' in 題 %}<img src = "{% static 'image/台灣團結聯盟黨徽.jpg' %}">
+						{% elif '無黨團結聯盟' in 題 %}<img src = "{% static 'image/無黨團結聯盟黨徽.jpg' %}">
+						{% else %}<img src = "{% static 'image/無黨籍.jpg' %}">
+						{% endif %}
+					{% endif %}
+					<br/> 
 					{{ 票 }}<br/>
 					{{ 比|floatformat:-1 }}%
 				</td>

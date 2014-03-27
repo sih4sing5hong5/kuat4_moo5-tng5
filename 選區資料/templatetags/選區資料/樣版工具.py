@@ -31,4 +31,8 @@ def 變字串(物件):
 	if isinstance(物件, float):
 		return str(round(物件,1))+'%'
 	return 物件
+
+@register.filter(name='split')
+def split(self):
+        return self.screenshots.split('\n')
 		
