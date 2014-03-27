@@ -1,0 +1,70 @@
+{% extends "選區資料/框.html" %}
+
+{% block 內容 %}
+	<div>{{ 選區.縣市 }} | {{ 選區.第幾區 }}</div>
+	<h1 class = tableHead>得票率第一、二名比較</h1>
+	<table class=t1>
+	{% load 選區資料.樣版工具 %}
+	<tr class = top>
+	{% for 逝 in 選區.綜合資訊|轉置 %}
+		{% for 欄 in 逝 %}
+			<td>
+				{{ 欄|變字串 }}<br/>
+			</td>
+		{% endfor %}
+		</tr>
+		<tr>
+	{% endfor %}
+	</tr>
+	</table>
+	<h1 class = tableHead>參選候選人得票結果</h1>
+	<table class=t1>
+		<tr class=top>
+			{% for 人,票 in 選區.候選人票數 %}
+				<th>
+					{{ 人|linebreaksbr }}
+				</th>
+			{% endfor %}
+		</tr>
+		<tr>
+			{% for 人,票 in 選區.候選人票數 %}
+				<td>
+					{{票}}
+				</td>
+			{% endfor %}
+		</tr>
+	</table>
+	<h1 class = tableHead>各投開票所選票明細</h1>	
+	<table class=t1>
+		<tr class=top>
+		<td>鄉鎮區別</td>
+		<td>村里別</td>
+		<td>投票所別</td>
+		<td>有效票數</td>
+		<td>無效票數</td>
+		<td>投票數</td>
+		<td>已領未投票數</td>
+		<td>發出票數</td>
+		<td>用餘票數</td>
+		<td>選舉人數</td>
+		<td>發票率%</td>
+		</tr>	
+		{% for 投開票所 in 選區.投開票所.all %}
+			<tr>
+			<td>{{ 投開票所.鄉鎮區別 }}</td>
+			<td>{{ 投開票所.村里別 }}</td>
+			<td>{{ 投開票所.投票所別 }}</td>
+			<td>{{ 投開票所.有效票數A }}</td>
+			<td>{{ 投開票所.無效票數B }}</td>
+			<td>{{ 投開票所.投票數C }}</td>
+			<td>{{ 投開票所.已領未投票數D }}</td>
+			<td>{{ 投開票所.發出票數E }}</td>
+			<td>{{ 投開票所.用餘票數F }}</td>
+			<td>{{ 投開票所.選舉人數G }}</td>
+			<td>{{ 投開票所.發票率H }}</td>
+			<!-- <td>{{ 投開票所.收錄時間 }}</td>
+			<td>{{ 投開票所.修改時間 }}</td> -->	
+			</tr>
+		{% endfor %}
+	</table>
+{% endblock %}

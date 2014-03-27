@@ -1,0 +1,29 @@
+h1.tableHead
+{
+	text-align:center;
+	font-family: 標楷體;
+}
+
+table.t1
+{
+	width: 100%;
+	font-size: 133%;
+	border-collapse:collapse;
+}
+
+table.t1 td,th
+{
+	vertical-align: top;
+	border: 1px solid rgb(50,50,50);
+	background-color: rgb(230,250,220);
+	font-family: myFirstFont;
+}
+
+tr.top td,th 
+{
+	text-align:center;
+	background-color:rgb(100,100,100);
+	color:white;
+	font-family: 標楷體;
+	font-weight : bold;	
+}

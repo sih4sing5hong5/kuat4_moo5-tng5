@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block 標題 %}割闌尾計劃{% endblock %}</title>
+    {% block extrahead %}{% endblock %}
+    {% load staticfiles %}
+	<link rel="stylesheet" type="text/css" href="{% static '選區資料/版面.css' %}" />
+	<link rel="stylesheet" type="text/css" href="{% static '選區資料/format.css' %}" />
+</head>
+
+<body id = "main">
+	<div id="header"> 
+		<img src = "{% static 'image/header.jpg' %}" align=left>
+	</div>
+	<div id="headerBar"> 
+		<li>123</li>
+	</div>	
+	
+	<div id = "outer">
+	    <!-- SIDEBAR -->
+	    <div id="sidebar"> {% block sidebar %}{% endblock %} 
+	    	<li>"tt"</li>
+	    </div>
+	
+	    <div id="container">
+	
+	        <!-- MENU -->
+	
+	        <div id="menu">
+	            {% block nav-global %}
+					<span>
+						<a href="{% url '看全部選區' %}">全部選區</a>
+					</span>
+	            {% endblock %}
+	        </div>
+		<br/>
+	        <!-- CONTENT -->
+	
+	        <div id="內容">
+	            {% block 內容 %}{% endblock %}
+	        </div>
+	    </div>
+    </div>
+	<div id="footer"> </div>
+</body>
+</html>
