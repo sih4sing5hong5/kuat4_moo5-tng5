@@ -21,6 +21,9 @@
 			{% for 題,票,比 in 資料.綜合資訊 %}
 				<td>
 					{{ 題 }}<br/>
+					{% if '國民黨' in 題 %}
+					addd
+					{% endif %} 
 					{{ 票 }}<br/>
 					{{ 比|floatformat:-1 }}%
 				</td>
