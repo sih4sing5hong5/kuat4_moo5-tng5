@@ -1,67 +1,55 @@
 #main
 {
 	margin:0px auto;
-	background:#D0D0D0;
-}
-
-div.avada-row
-{
-	clear:left;	
-	margin:0px auto;
-	height: 20px;
-	background: rgb(76,76,76); /* Old browsers */
-	background: -moz-linear-gradient(top, rgba(76,76,76,1) 0%, rgba(89,89,89,1) 12%, rgba(102,102,102,1) 25%, rgba(71,71,71,1) 39%, rgba(44,44,44,1) 50%, rgba(0,0,0,1) 51%, rgba(17,17,17,1) 60%, rgba(43,43,43,1) 76%, rgba(28,28,28,1) 91%, rgba(19,19,19,1) 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(76,76,76,1)), color-stop(12%,rgba(89,89,89,1)), color-stop(25%,rgba(102,102,102,1)), color-stop(39%,rgba(71,71,71,1)), color-stop(50%,rgba(44,44,44,1)), color-stop(51%,rgba(0,0,0,1)), color-stop(60%,rgba(17,17,17,1)), color-stop(76%,rgba(43,43,43,1)), color-stop(91%,rgba(28,28,28,1)), color-stop(100%,rgba(19,19,19,1))); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top, rgba(76,76,76,1) 0%,rgba(89,89,89,1) 12%,rgba(102,102,102,1) 25%,rgba(71,71,71,1) 39%,rgba(44,44,44,1) 50%,rgba(0,0,0,1) 51%,rgba(17,17,17,1) 60%,rgba(43,43,43,1) 76%,rgba(28,28,28,1) 91%,rgba(19,19,19,1) 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top, rgba(76,76,76,1) 0%,rgba(89,89,89,1) 12%,rgba(102,102,102,1) 25%,rgba(71,71,71,1) 39%,rgba(44,44,44,1) 50%,rgba(0,0,0,1) 51%,rgba(17,17,17,1) 60%,rgba(43,43,43,1) 76%,rgba(28,28,28,1) 91%,rgba(19,19,19,1) 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top, rgba(76,76,76,1) 0%,rgba(89,89,89,1) 12%,rgba(102,102,102,1) 25%,rgba(71,71,71,1) 39%,rgba(44,44,44,1) 50%,rgba(0,0,0,1) 51%,rgba(17,17,17,1) 60%,rgba(43,43,43,1) 76%,rgba(28,28,28,1) 91%,rgba(19,19,19,1) 100%); /* IE10+ */
-	background: linear-gradient(to bottom, rgba(76,76,76,1) 0%,rgba(89,89,89,1) 12%,rgba(102,102,102,1) 25%,rgba(71,71,71,1) 39%,rgba(44,44,44,1) 50%,rgba(0,0,0,1) 51%,rgba(17,17,17,1) 60%,rgba(43,43,43,1) 76%,rgba(28,28,28,1) 91%,rgba(19,19,19,1) 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#131313',GradientType=0 ); /* IE6-9 */
+	background:white;
 }
 
 #header
 {
 	margin:0px auto;
-	height: 150px;
-	width: 40%;
-    float:left;	
-	font-size: 100%;
-	background:#F0F0F0;
+	height: 60px;
+	background:black;
+	-webkit-box-shadow: #333 0px 2px 3px;     /*陰影for Google Chrome、Safari*/
+	-moz-box-shadow: #333 0px 2px 3px;     /*陰影for Firefox*/
+	box-shadow: #333 0px 2px 3px;     /*陰影for IE*/
+}
+
+#headerIcon
+{
+	margin:0px auto;
+	height: 60px;
+	width: 180px;
+    float:left;
 }
 
 #mainIcon
 {
 	position:relative;
-	left:60px;
+	left:30px;
+	max-height:60px;
+	width:120px;
 }
 
 #headerBar
 {
 	margin:0px auto;
-	height:150px;
-	width: 60%;
+	height:60px;
+	width: 20%;
 	font-size: 120%;
 	font-weight: bold;
 	font-family: impact;
-	text-shadow: 1px 1px 2px #777;
-	float:left;
-	background: -moz-linear-gradient(left, rgba(240,240,240,1) 0%, rgba(224,224,224,0) 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(240,240,240,1)), color-stop(100%,rgba(224,224,224,0))); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(left, rgba(240,240,240,1) 0%,rgba(224,224,224,0) 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(left, rgba(240,240,240,1) 0%,rgba(224,224,224,0) 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(left, rgba(240,240,240,1) 0%,rgba(224,224,224,0) 100%); /* IE10+ */
-	background: linear-gradient(to right, rgba(240,240,240,1) 0%,rgba(224,224,224,0) 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f0f0', endColorstr='#00e0e0e0',GradientType=1 ); /* IE6-9 */	
+	float:left;	
+	background:black;
 }
 
 a.topnav
 {
 	text-decoration: none;
+	color: white;
 }
 
 table.topnav
 {
-	color: black;
 	text-decoration: none;
 	width:100%;
 	height:100%;
@@ -72,10 +60,29 @@ table.topnav
 table.topnav td
 {
 	vertical-align:middle;
+	border-left:1px solid grey;
+	border-right:1px solid grey;
+}
+
+#G0VIconDiv
+{
+	margin:0px auto;
+	position: absolute; 
+	right: 0;
+	height: 60px;
+	width: 200px;
+    float:left;
+}
+
+#G0VIcon
+{	
+	max-height:60px;
+	width:180px;
 }
 
 #outer {
 	 margin:0px auto;
+	 margin-top:10px;
 	 font-size: 80%;
 	 clear:left;
 }
@@ -131,5 +138,5 @@ table.sidebar a
 	margin:0px auto;
 	height: 130px;
 	clear:left;
-	background: rgb(60,60,60);
+	background: black;
 }

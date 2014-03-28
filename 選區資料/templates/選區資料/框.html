@@ -10,21 +10,32 @@
 
 <body id = "main">
 
-	<div class=avada-row></div>
 	<div id="header">
-		<img id=mainIcon src = "{% static 'image/header.jpg' %}" align=left>
+		<div id="headerIcon">
+			<a href="{% url '看全部罷免' %}">
+				<img id=mainIcon src = "{% static 'image/header.jpg' %}">
+			</a>
+		</div>
+		<div id="headerBar"> 
+			<table class = topnav>
+				<tr>
+					<td><a class = topnav href="{% url '看全部罷免' %}">罷免狀況</a>
+						<!--<select>
+						 <option>文字敘述1</option>
+						 <option>文字敘述2</option>
+						 <option >文字敘述3</option>
+						</select>-->
+					</td>
+					<td><a class = topnav href="{% url '看全部選區' %}">選區資料</a></td>
+				</tr>
+			</table>
+		</div>
+		<div id="G0VIconDiv">
+			<a href="http://g0v.tw/">
+				<img id=G0VIcon src = "{% static 'image/g0v-icon-invert.jpg' %}">
+			</a>
+		</div>
 	</div>
-	
-	<div id="headerBar"> 
-		<table class = topnav>
-			<tr>
-				<td><a class = topnav href="{% url '看全部罷免' %}">罷免狀況</a></td>
-				<td><a class = topnav href="{% url '看全部選區' %}">選區資料</a></td>
-			</tr>
-		</table>
-	</div>
-	
-	<div class=avada-row></div>
 	
 	<div id = "outer">
 	    <!-- SIDEBAR -->
