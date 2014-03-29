@@ -1,4 +1,4 @@
-{% extends "罷免進度/sidebar.html" %}
+{% extends "選區資料/nav-global.html" %}
 
 {% block 內容 %}
 	<h1 class = tableHead>現正罷免立委</h1>
@@ -13,7 +13,7 @@
 		<th>修改時間</th>
 		</tr>
 		{% for 罷免 in 全部罷免 %}
-			<tr>
+			<tr class = crosscolorTr>
 			<td>{{ 罷免.選區 }}</td>
 			<td>{{ 罷免.開始罷免時間|date:"Y-m-d" }}</td>
 			<td>{{ 罷免.結束罷免時間|date:"Y-m-d" }}</td>

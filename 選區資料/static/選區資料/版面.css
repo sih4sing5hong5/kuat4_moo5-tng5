@@ -1,7 +1,7 @@
 #main
 {
 	margin:0px auto;
-	background:white;
+	background:#F0F0F0;
 }
 
 #header
@@ -45,7 +45,7 @@
 a.topnav
 {
 	text-decoration: none;
-	color: white;
+	color: white;	
 }
 
 table.topnav
@@ -82,11 +82,10 @@ table.topnav td
 
 #outer {
 	 margin:0px auto;
-	 margin-top:10px;
 	 font-size: 80%;
 	 clear:left;
 }
-
+/*
 #sidebar {
 	width:15%;
 	height:100%;
@@ -119,13 +118,18 @@ table.sidebar a
 	position:relative;
 	left:10px;	
 }
-
+*/
 #container
 {
-	width:85%;
-	float:left;
+	width:90%;
 	margin:0px auto;
 	background:white;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+	-webkit-box-shadow: #333 0px 2px 3px;     /*陰影for Google Chrome、Safari*/
+	-moz-box-shadow: #333 0px 2px 3px;     /*陰影for Firefox*/
+	box-shadow: #333 0px 2px 3px;     /*陰影for IE*/	
 }
 
 #內容
@@ -136,6 +140,7 @@ table.sidebar a
 
 #footer {
 	margin:0px auto;
+	margin-top:20px;
 	height: 130px;
 	clear:left;
 	background: black;

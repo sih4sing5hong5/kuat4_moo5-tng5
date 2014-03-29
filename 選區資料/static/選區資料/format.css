@@ -1,29 +1,42 @@
 table.t1
 {
-	width: 100%;
-	font-size: 133%;
+	width: 90%;
 	border-collapse:collapse;
+	margin:0px auto;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	-webkit-box-shadow: #333 0px 2px 3px;     /*陰影for Google Chrome、Safari*/
+	-moz-box-shadow: #333 0px 2px 3px;     /*陰影for Firefox*/
+	box-shadow: #333 0px 2px 3px;     /*陰影for IE*/		
 }
 
 table.t1 td
 {
-	vertical-align: top;
-	border: 1px solid rgb(50,50,50);
-	background-color: rgb(230,250,220);
+	border: 1px solid #E0E0E0;
 	font-family: myFirstFont;
 }
 
 tr.top td,th {
 	text-align:center;
-	border: 1px solid rgb(50,50,50);
-	background-color:#000099;
-	color:white;
+	border: 1px solid #E0E0E0;
+	background-color:rgb(254,255,153);
+	color:black;
 	font-family: 標楷體;
 	font-weight : bold;	
 }
 
+tr.odd {
+	background-color:#F0F0F0;
+} 
+tr.even {
+	background-color:white;
+} 
+
 h1.tableHead
 {
+	position:relative;
+	top:10px;
 	font-family: 標楷體;
 	font-weight: bold;
 	font-family: impact;

@@ -1,0 +1,18 @@
+{% extends "選區資料/框.html" %}
+<!-- menu -->
+
+{% block nav-global %}
+	<table class = topnav>
+		<tr>
+			<!-- memu -->				
+			<td><a class = topnav href="{% url '看全部罷免' %}">罷免狀況</a>
+				<!--<select>
+				 <option>文字敘述1</option>
+				 <option>文字敘述2</option>
+				 <option >文字敘述3</option>
+				</select>-->
+			</td>
+			<td><a class = topnav href="{% url '看全部選區' %}">選區資料</a></td>
+		</tr>
+	</table>
+{% endblock %}

@@ -17,18 +17,9 @@
 			</a>
 		</div>
 		<div id="headerBar"> 
-			<table class = topnav>
-				<tr>
-					<td><a class = topnav href="{% url '看全部罷免' %}">罷免狀況</a>
-						<!--<select>
-						 <option>文字敘述1</option>
-						 <option>文字敘述2</option>
-						 <option >文字敘述3</option>
-						</select>-->
-					</td>
-					<td><a class = topnav href="{% url '看全部選區' %}">選區資料</a></td>
-				</tr>
-			</table>
+			<!-- memu -->
+            {% block nav-global %}
+            {% endblock %}		
 		</div>
 		<div id="G0VIconDiv">
 			<a href="http://g0v.tw/">
@@ -44,13 +35,6 @@
 	    </div>
 	
 	    <div id="container">
-	
-	        <!-- MENU -->
-	
-	        <div id="menu">
-	            {% block nav-global %}
-	            {% endblock %}
-	        </div>
 	        <!-- CONTENT -->
 	
 	        <div id="內容">
