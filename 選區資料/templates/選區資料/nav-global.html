@@ -2,17 +2,17 @@
 <!-- menu -->
 
 {% block nav-global %}
-	<table class = topnav>
-		<tr>
-			<!-- memu -->				
-			<td><a class = topnav href="{% url '看全部罷免' %}">罷免狀況</a>
-				<!--<select>
-				 <option>文字敘述1</option>
-				 <option>文字敘述2</option>
-				 <option >文字敘述3</option>
-				</select>-->
-			</td>
-			<td><a class = topnav href="{% url '看全部選區' %}">選區資料</a></td>
-		</tr>
-	</table>
+	<ul>
+		<li>罷免
+			<ul>		
+				<li><a href="{% url '看全部罷免' %}">現正罷免清單</a></li>
+				<li><a href="{% url '新罷免' %}">新增罷免</a></td></li>
+			</ul>
+		</li>
+		<li>選區資料
+			<ul>
+				<li><a href="{% url '看全部選區' %}">選區資料</a></li>		
+			</ul>
+		</li>
+	</ul>
 {% endblock %}
