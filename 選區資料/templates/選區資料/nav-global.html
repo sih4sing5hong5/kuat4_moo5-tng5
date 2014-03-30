@@ -3,15 +3,16 @@
 
 {% block nav-global %}
 	<ul>
-		<li>罷免
+		<li><a>罷免</a>
 			<ul>		
 				<li><a href="{% url '看全部罷免' %}">現正罷免清單</a></li>
-				<li><a href="{% url '新罷免' %}">新增罷免</a></td></li>
+				<li><a href="{% url '新罷免' %}">新增罷免</a></li>
 			</ul>
 		</li>
-		<li>選區資料
+		<li><a>選區資料</a>
 			<ul>
 				<li><a href="{% url '看全部選區' %}">選區資料</a></li>		
+				<li><a href="{% url '看全部選區' %}">選區資料</a></li>
 			</ul>
 		</li>
 	</ul>
