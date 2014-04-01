@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from django.conf.urls import patterns, url
 from 罷免進度.介面 import 看全部罷免
 from 罷免進度.介面 import 罷免資訊
