@@ -20,6 +20,13 @@ def 看全部選區(request):
 	})
 	return HttpResponse(版.render(文))
 
+def 看選區json(request):
+	全部選區 = 選區.objects.all()
+	資料=[]
+	for 一个選區 in 全部選區:
+		資料.append((一个選區.縣市,一个選區.第幾區,一个選區.選區總票數()))
+	return HttpResponse(資料)
+
 def 看選區(request,pk):
 	選區資料 = 選區.objects.get(pk=pk)
 	版 = loader.get_template('選區資料/選區.html')
